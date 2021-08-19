@@ -6,7 +6,7 @@ from app.models import Music, db
 
 from app.forms import newMusicForm
 
-site = Blueprint('site', __name__, template_folder='site_templates')
+site = Blueprint('site', __name__, template_folder='site_templates', static_folder='../static')
 
 
 @site.route('/', methods=['GET', 'POST'])

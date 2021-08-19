@@ -5,15 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Flappybird</title>
     <style>
         body {
             margin:0px;
             padding: 0px;
-            flex-direction: column;
             align-items: center;
-            display: flex;
             justify-content: center;
             overflow: hidden;
             height: 100vh;
@@ -23,7 +20,7 @@
         }
 
         #gameFlap {
-            background-image: url(/app/static/JSGAMES/images/flappybirdbackground.png);
+            background-image: url(../static/JSGAMES/images/flappybirdbackground.png);
             width: 900px;
             height: 500px;
             border: 1px solid black;
@@ -38,7 +35,7 @@
             position: relative;
             left: 900px;
             animation: block 3s infinite linear;
-            background-image: url(/app/static/JSGAMES/images/wood.png);
+            background-image: url(../static/JSGAMES/images/wood.png);
             background-size: contain;
         }
 
@@ -68,7 +65,7 @@
             position: absolute;
             top: 100px;
             border-radius: 50%;
-            background-image: url(/app/static/JSGAMES/images/img1.png);
+            background-image: url(../static/JSGAMES/images/img1.png);
             background-size: contain;
         }
     </style>
@@ -87,8 +84,8 @@
         <div id="bird"></div>
     </div>
 
+    <script src="{{url_for('static', filename='JSGAMES/flappy.js')}}"></script>
     {% endblock content %}
-    <script src="{{url_for('static', filename='/app/static/JSGAMES/flappy.js')}}"></script>
 </body>
 
 </html>

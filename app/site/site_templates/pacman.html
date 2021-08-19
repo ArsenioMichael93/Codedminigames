@@ -18,8 +18,6 @@
         }
 
         body {
-            margin:0px;
-            padding: 0px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -41,8 +39,9 @@
         <h1>Pac-Man</h1>
         <canvas id="gameCanvas"></canvas>
     </div>
+
+    <script src="{{url_for('static', filename='JSGAMES/pacman-main/src/Game.js')}}"></script>
     {% endblock content %}
-    <script src="{{url_for('static', filename='/app/static/JSGAMES/pacman-main/src/Game.js')}}"></script>
 </body>
 
 </html>

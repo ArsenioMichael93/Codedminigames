@@ -1,4 +1,4 @@
-import MovingDirection from "/app/site/JSGAMES/pacman-main/src/MovingDirection.js";
+//import MovingDirection from "/app/site/JSGAMES/pacman-main/src/MovingDirection.js";
 
 export default class Enemy {
   constructor(x, y, tileSize, velocity, tileMap) {
@@ -127,13 +127,13 @@ export default class Enemy {
 
   #loadImages() {
     this.normalGhost = new Image();
-    this.normalGhost.src = "/app/site/JSGAMES/images/ghost.png";
+    this.normalGhost.src = "../images/ghost.png";
 
     this.scaredGhost = new Image();
-    this.scaredGhost.src = "/app/site/JSGAMES/images/scaredGhost.png";
+    this.scaredGhost.src = "../images/scaredGhost.png";
 
     this.scaredGhost2 = new Image();
-    this.scaredGhost2.src = "/app/site/JSGAMES/images/scaredGhost2.png";
+    this.scaredGhost2.src = "../images/scaredGhost2.png";
 
     this.image = this.normalGhost;
   }
