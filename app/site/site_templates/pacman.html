@@ -18,8 +18,12 @@
         }
 
         body {
+            margin:0px;
+            padding: 0px;
             display: flex;
+            flex-direction: column;
             justify-content: center;
+            align-items: center;
             overflow: hidden;
             height: 100vh;
             background: linear-gradient(0deg,
@@ -38,7 +42,7 @@
         <canvas id="gameCanvas"></canvas>
     </div>
     {% endblock content %}
-    <script src="/app/site/JSGAMES/pacman-main/src/Game.js" type="module"></script>
+    <script src="{{url_for('static', filename='/app/static/JSGAMES/pacman-main/src/Game.js')}}"></script>
 </body>
 
 </html>
