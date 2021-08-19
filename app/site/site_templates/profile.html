@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<style type="text/css">
+    .bodyContent {
+        background-color: transparent;
+    }
+
+
+    body {
+        background: url(http://www.fillster.com/images/backgrounds/219u.gif);
+        background-attachment: fixed;
+        background-repeat: repeat;
+    }
+</style>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <div class="container3">
+        <div class="Nav_bar0">
+            {% extends 'base.html' %}
+
+            {% block content %}
+        </div>
+        <div class="enjoy">
+            <<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/oOlDewpCfZQ"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+        <div class="profile_card">
+            <div id="homepage" class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h1 class="card-title"> Please Show me some new music. =) </h1>
+                    {% include 'forms.html' %}
+                </div>
+            </div>
+        </div>
+        {% endblock content %}
+    </div>
+</body>
+
+</html>
