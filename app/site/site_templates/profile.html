@@ -7,7 +7,14 @@
 
 
     body {
-        background: url(http://www.fillster.com/images/backgrounds/219u.gif);
+        margin:0px;
+            padding: 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        background: url(http://www.fillster.com/images/backgrounds/718b.jpg);
         background-attachment: fixed;
         background-repeat: repeat;
     }
@@ -30,15 +37,11 @@
             {% block content %}
         </div>
         <div class="enjoy">
-            <<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/oOlDewpCfZQ"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
         </div>
         <div class="profile_card">
             <div id="homepage" class="card" style="width: 18rem;">
                 <div class="card-body">
-                    <h1 class="card-title"> Please Show me some new music. =) </h1>
+                    <h1 class="card-title"> Please give me simple game ideas like pong. =) </h1>
                     {% include 'forms.html' %}
                 </div>
             </div>

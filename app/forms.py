@@ -2,12 +2,9 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, PasswordField
 from wtforms.validators import DataRequired, Email, EqualTo
 
-class newMusicForm(FlaskForm):
+class newGameForm(FlaskForm):
 
     name = StringField('Name', validators=[DataRequired()])
-    genre = StringField('Genre', )
-    band =StringField('Band', )
-    playlist = StringField('Playlist', )
     submit_button= SubmitField()
 
 

@@ -2,9 +2,9 @@ from flask import Blueprint, render_template, request, flash, redirect, url_for
 
 from flask_login import current_user, login_required
 
-from app.models import Music, db
+from app.models import Game, db
 
-from app.forms import newMusicForm
+from app.forms import newGameForm
 
 site = Blueprint('site', __name__, template_folder='site_templates', static_folder='../static')
 
@@ -21,22 +21,18 @@ def home():
 @site.route('/profile')
 @login_required
 def profile():
-    form = newMusicForm()
+    form = newGameForm()
     try:
         if request.method == 'POST' and form.validate_on_submit():
             namedata = form.name.data
-            genredata = form.genre.data
-            banddata = form.band.data
-            playlistdata = form.playlist.data
-            print(namedata, banddata)
 
-            new_Music = Music(namedata, genredata, banddata, playlistdata)
+            new_Game = Game(namedata)
 
-            db.session.add(new_Music)
+            db.session.add(new_Game)
             db.session.commit()
 
             flash(
-                f'You have successfully added the Music {namedata} to your database.')
+                f'You have successfully added the Game {namedata} to your database.')
 
             return redirect(url_for('site.profile'))
     except:
@@ -44,22 +40,22 @@ def profile():
         return redirect(url_for('site.profile'))
     return render_template('profile.html', form=form)
 
-
+@login_required
 @site.route('/flappybird')
 def flappy():
     return render_template('flappybird.html')
 
-
+@login_required
 @site.route('/Dino')
 def Dino():
     return render_template('Dino.html')
 
-
+@login_required
 @site.route('/pacman')
 def pacman():
     return render_template('pacman.html')
 
-
+@login_required
 @site.route('/snake')
 def snake():
     return render_template('snake.html')
