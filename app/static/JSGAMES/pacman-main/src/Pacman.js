@@ -1,7 +1,8 @@
-//import MovingDirection from "/app/site/JSGAMES/pacman-main/src/MovingDirection.js";
-
+import MovingDirection from "./MovingDirection.js";
+const imageDir="/static/JSGAMES/pacman-main/images"
 export default class Pacman {
   constructor(x, y, tileSize, velocity, tileMap) {
+   
     this.x = x;
     this.y = y;
     this.tileSize = tileSize;
@@ -73,16 +74,16 @@ export default class Pacman {
 
   #loadPacmanImages() {
     const pacmanImage1 = new Image();
-    pacmanImage1.src = "../images/pac0.png";
+    pacmanImage1.src = `${imageDir}/pac0.png`;
 
     const pacmanImage2 = new Image();
-    pacmanImage2.src = "../images/pac1.png";
+    pacmanImage2.src = `${imageDir}/pac1.png`;
 
     const pacmanImage3 = new Image();
-    pacmanImage3.src = "../images/pac2.png";
+    pacmanImage3.src = `${imageDir}/pac2.png`;
 
     const pacmanImage4 = new Image();
-    pacmanImage4.src = "../images/pac1.png";
+    pacmanImage4.src = `${imageDir}/pac1.png`;
 
     this.pacmanImages = [
       pacmanImage1,
