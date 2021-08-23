@@ -1,19 +1,19 @@
-//import Pacman from "/app/static/JSGAMES/pacman-main/src/Pacman.js";
-//import Enemy from "/app/static/JSGAMES/pacman-main/src/Enemy.js";
-//import MovingDirection from "/app/static/JSGAMES/pacman-main/src/MovingDirection.js";
-
+import Pacman from "./Pacman.js";
+import Enemy from "./Enemy.js";
+import MovingDirection from "./MovingDirection.js";
+const imageDir="/static/JSGAMES/pacman-main/images"
 export default class TileMap {
   constructor(tileSize) {
     this.tileSize = tileSize;
 
     this.yellowDot = new Image();
-    this.yellowDot.src = "../images/yellowDot.png";
+    this.yellowDot.src = `${imageDir}/yellowDot.png`;
 
     this.pinkDot = new Image();
-    this.pinkDot.src = "../images/pinkDot.png";
+    this.pinkDot.src =  `${imageDir}/pinkDot.png`;
 
     this.wall = new Image();
-    this.wall.src = "../images/wall.png";
+    this.wall.src =  `${imageDir}/wall.png`;
 
     this.powerDot = this.pinkDot;
     this.powerDotAnmationTimerDefault = 30;

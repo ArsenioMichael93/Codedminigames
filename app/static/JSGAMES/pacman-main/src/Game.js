@@ -1,4 +1,4 @@
-import TileMap from "TileMap";
+import TileMap from "./TileMap.js";
 
 const tileSize = 32;
 const velocity = 2;

@@ -3,7 +3,11 @@ from flask_login import current_user, login_required
 from app.models import Game, db
 from app.forms import newGameForm
 
-site = Blueprint('site', __name__, template_folder='site_templates', static_folder='../static')
+import mimetypes
+mimetypes.add_type('application/javascript', '.js')
+
+site = Blueprint('site', __name__,
+                 template_folder='site_templates', static_folder='../static')
 
 
 @site.route('/', methods=['GET', 'POST'])
