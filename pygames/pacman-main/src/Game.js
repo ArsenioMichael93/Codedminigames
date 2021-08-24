@@ -2,6 +2,7 @@ import TileMap from "./TileMap.js";
 
 const tileSize = 32;
 const velocity = 2;
+const soundDir="/static/JSGAMES/pacman-main/sounds"
 
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
@@ -11,8 +12,8 @@ const enemies = tileMap.getEnemies(velocity);
 
 let gameOver = false;
 let gameWin = false;
-const gameOverSound = new Audio("sounds/gameOver.wav");
-const gameWinSound = new Audio("sounds/gameWin.wav");
+const gameOverSound = new Audio(`${soundDir}/gameOver.wav`);
+const gameWinSound = new Audio(`${soundDir}/gameWin.wav`);
 
 function gameLoop() {
   tileMap.draw(ctx);
